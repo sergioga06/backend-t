@@ -1,0 +1,2 @@
+export const MSERVICE_USUARIOS = 'MS_USUARIOS';
+export const MSERVICE_ORDERS = 'M_ORDERS'
