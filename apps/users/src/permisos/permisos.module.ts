@@ -1,9 +1,14 @@
+// src/modulos/permisos/permisos.module.ts
 import { Module } from '@nestjs/common';
-import { PermisosService } from './permisos.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { PermisosController } from './permisos.controller';
+import { PermisosService } from './permisos.service';
+import { Permiso } from './entities/permiso.entity';
 
 @Module({
+  imports: [TypeOrmModule.forFeature([Permiso])],
   controllers: [PermisosController],
   providers: [PermisosService],
+  exports: [PermisosService],
 })
 export class PermisosModule {}
