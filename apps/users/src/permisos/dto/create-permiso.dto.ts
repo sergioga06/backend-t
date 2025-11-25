@@ -7,6 +7,11 @@ export class CreatePermisoDto {
 
   @IsString()
   @IsNotEmpty()
+  id: string;
+
+
+  @IsString()
+  @IsNotEmpty()
   action: string;
 
   @IsString()

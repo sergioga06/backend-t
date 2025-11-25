@@ -19,7 +19,7 @@ export class PermisosController {
   }
 
   @MessagePattern('findOnePermiso')
-  findOne(@Payload() id: number) {
+  findOne(@Payload() id: string) {
     return this.permisosService.findOne(id);
   }
 
@@ -29,7 +29,7 @@ export class PermisosController {
   }
 
   @MessagePattern('removePermiso')
-  remove(@Payload() id: number) {
+  remove(@Payload() id: string) {
     return this.permisosService.remove(id);
   }
 }
